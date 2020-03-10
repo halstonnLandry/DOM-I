@@ -42,9 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-anchor = Array.from(document.querySelector("nav").getElementsByTagName("a"));
+const anchor = Array.from(document.querySelector("nav").getElementsByTagName("a"));
 anchor.forEach((x, i) => x.innerText = siteContent.nav["nav-item-"+Number(i+1)]);
 
+const navChange=document.querySelector('nav');
+navChange.append('new append');
+navChange.prepend('new prepend');
+navChange.style.backgroundColor='green';
 
 const ctaText=document.querySelector('h1');
 ctaText.textContent=siteContent['cta']['h1'];
