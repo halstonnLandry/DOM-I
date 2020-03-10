@@ -80,10 +80,10 @@ const contactTitle=document.querySelector('.contact h4');
 contactTitle.textContent=siteContent['contact']['contact-h4'];
 
 const contactInfo=document.querySelectorAll('.contact p');
-
 contactInfo[0].textContent=siteContent['contact']['address'];
 contactInfo[1].textContent=siteContent['contact']['phone'];
 contactInfo[2].textContent=siteContent['contact']['email'];
 
-const foot=document.querySelector['.footer p'];
-foot.textContent=siteContent['footer']['copyright'];
+const footerText=document.querySelector('footer p');
+footerText.textContent=siteContent["footer"]["copyright"];
+console.log(footerText);
