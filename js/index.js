@@ -39,4 +39,55 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+const anchor = Array.from(document.querySelector("nav").getElementsByTagName("a"));
+anchor.forEach((x, i) => x.innerText = siteContent.nav["nav-item-"+Number(i+1)]);
+
+const navChange=document.querySelector('nav');
+navChange.append('new append');
+navChange.prepend('new prepend');
+navChange.style.backgroundColor='green';
+
+const ctaText=document.querySelector('h1');
+ctaText.textContent=siteContent['cta']['h1'];
+
+ctaText.style.margin='0 200px';
+ctaText.style.maxWidth='150px';
+
+
+const ctaButton=document.querySelector('button');
+ctaButton.textContent=siteContent['cta']['button'];
+
+const ctaImg=document.getElementById('cta-img');
+ctaImg.setAttribute('src',siteContent['cta']['img-src']);
+
+const ContentTitles=document.querySelectorAll('h4');
+ContentTitles[0].textContent=siteContent["main-content"]["features-h4"];
+ContentTitles[1].textContent=siteContent["main-content"]["about-h4"];
+ContentTitles[2].textContent=siteContent["main-content"]["services-h4"];
+ContentTitles[3].textContent=siteContent["main-content"]["product-h4"];
+ContentTitles[4].textContent=siteContent["main-content"]["vision-h4"];
+
+let contentText=document.querySelectorAll('p');
+contentText[0].textContent=siteContent["main-content"]["features-content"];
+contentText[1].textContent=siteContent["main-content"]["about-content"];
+contentText[2].textContent=siteContent["main-content"]["services-content"];
+contentText[3].textContent=siteContent["main-content"]["product-content"];
+contentText[4].textContent=siteContent["main-content"]["vision-content"];
+
+const midImg=document.getElementById("middle-img");
+midImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
+
+const contactTitle=document.querySelector('.contact h4');
+contactTitle.textContent=siteContent['contact']['contact-h4'];
+
+const contactInfo=document.querySelectorAll('.contact p');
+contactInfo[0].textContent=siteContent['contact']['address'];
+contactInfo[1].textContent=siteContent['contact']['phone'];
+contactInfo[2].textContent=siteContent['contact']['email'];
+
+const footerText=document.querySelector('footer p');
+footerText.textContent=siteContent["footer"]["copyright"];
+console.log(footerText);
